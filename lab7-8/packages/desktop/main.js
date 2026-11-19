@@ -5,7 +5,6 @@ import { BooksService } from "@bukvarnia/core";
 import { FileStorageAdapter } from "./fileStorageAdapter.js";
 import { createHandlers } from "./ipcHandlers.js";
 
-// У модулі ES немає __dirname — отримуємо теку з import.meta.url
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 function createWindow() {

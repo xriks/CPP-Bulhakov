@@ -20,7 +20,6 @@ export const ERROR_INVALID_STOCK = "Будь ласка, введіть коре
 export const ERROR_INVALID_GENRE = "Оберіть жанр зі списку.";
 export const ERROR_DESCRIPTION_TOO_LONG = `Опис не повинен перевищувати ${MAX_DESCRIPTION_LENGTH} символів.`;
 
-/** Перетворює значення поля (рядок із форми або число) на число; порожнє значення -> NaN. */
 export function parseNumber(value) {
     if (typeof value === "number") return value;
     if (typeof value === "string" && value.trim() !== "") return Number(value.trim());
@@ -31,7 +30,6 @@ function text(value) {
     return typeof value === "string" ? value.trim() : "";
 }
 
-/** Перевіряє дані нової книги. Повертає { isValid, error }. */
 export function validateBook(data) {
     if (typeof data !== "object" || data === null || Array.isArray(data)) {
         return { isValid: false, error: ERROR_INVALID_DATA };

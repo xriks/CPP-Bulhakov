@@ -15,7 +15,6 @@ function isValidPayload(data) {
     );
 }
 
-/** Обробники IPC над BooksService (electron не підключається — тестується без вікна). */
 export function createHandlers(service) {
     return {
         genres() {

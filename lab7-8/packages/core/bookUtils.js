@@ -1,6 +1,5 @@
 import { parseNumber } from "./bookValidation.js";
 
-/** Створює книгу з перевірених даних форми. */
 export function createBook(data, id, now = new Date()) {
     return {
         id,
@@ -15,7 +14,6 @@ export function createBook(data, id, now = new Date()) {
     };
 }
 
-/** Дата у форматі дд.мм.рррр; для некоректної дати — порожній рядок. */
 export function formatBookDate(value) {
     const date = new Date(value);
     if (value === undefined || value === null || Number.isNaN(date.getTime())) return "";
@@ -24,7 +22,6 @@ export function formatBookDate(value) {
     return `${dd}.${mm}.${date.getFullYear()}`;
 }
 
-/** Спочатку новіші. Вихідний масив не змінюється. */
 export function sortBooksByDate(books) {
     return [...books].sort((a, b) => {
         const diff = new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
@@ -32,7 +29,6 @@ export function sortBooksByDate(books) {
     });
 }
 
-/** Пошук без урахування регістру за назвою, автором, жанром і видавництвом. */
 export function filterBooksByQuery(books, query) {
     const q = typeof query === "string" ? query.trim().toLowerCase() : "";
     if (q === "") return [...books];
@@ -43,7 +39,6 @@ export function filterBooksByQuery(books, query) {
     );
 }
 
-/** Відкидає некоректні записи зі сховища та доповнює відсутні необов'язкові поля. */
 export function sanitizeBooks(raw) {
     if (!Array.isArray(raw)) return [];
     return raw
