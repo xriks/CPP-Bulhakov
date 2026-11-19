@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Крос-платформне програмування — лабораторні роботи</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #fbf9f5;
+            color: #2c3e50;
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            padding: 50px 0 40px;
+            text-align: center;
+            color: #fff;
+            background: linear-gradient(135deg, #3a3b4e 0%, #7c2a41 100%);
+            box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-weight: 700;
+            font-size: 40px;
+        }
+
+        .header p {
+            margin: 10px 0 0;
+            font-size: 15px;
+            opacity: 0.9;
+        }
+
+        .main {
+            padding: 30px 0 40px;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #efe3d0;
+            border-radius: 18px;
+            padding: 24px 28px;
+            box-shadow: 0 2px 8px rgb(0 0 0 / 0.04);
+        }
+
+        .card h2 {
+            margin: 0 0 18px;
+            padding-bottom: 10px;
+            font-size: 22px;
+            color: #8b2942;
+            border-bottom: 1px solid #efe3d0;
+        }
+
+        .lab-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .lab-list li {
+            margin-bottom: 14px;
+        }
+
+        .lab-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .lab-link {
+            display: block;
+            background: #fffbf7;
+            border: 1px solid #efe3d0;
+            border-radius: 12px;
+            padding: 18px 22px;
+            text-decoration: none;
+            color: #4a5560;
+            font-size: 15px;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .lab-link:hover {
+            border-color: #8b2942;
+            box-shadow: 0 3px 10px rgb(139 41 66 / 0.12);
+        }
+
+        .lab-link strong {
+            color: #8b2942;
+            font-size: 16px;
+        }
+
+        @media (max-width: 900px) {
+            .header h1 {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .header {
+                padding: 35px 0 28px;
+            }
+
+            .header h1 {
+                font-size: 25px;
+            }
+
+            .card {
+                padding: 18px 16px;
+                border-radius: 14px;
+            }
+
+            .lab-link {
+                padding: 14px 16px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <h1>Крос-платформне програмування</h1>
+        <p>Список лабораторних робіт</p>
+        <p>Булгакова Маргарита</p>
+    </div>
+</header>
+
+<main class="container main">
+    <section class="card">
+        <h2>Лабораторні роботи</h2>
+        <ul class="lab-list">
+            <li>
+                <a class="lab-link" href=lab1/index.html>
+                    <strong>Лабораторна робота №1</strong><br>
+                    Основи кросплатформності. Створення вебсторінки для застосунку «Букварня».
+                </a>
+            </li>
+            <li>
+                <a class="lab-link" href="https://github.com/xriks/CPP-Bulhakov/tree/main/lab2">
+                    <strong>Лабораторна робота №2</strong><br>
+                    Серверна частина застосунку «Букварня» — REST API (Node.js, Express, MongoDB/Mongoose)
+                </a>
+            </li>
+            <li>
+                <a class="lab-link" href="https://github.com/xriks/CPP-Bulhakov/tree/main/lab3">
+                    <strong>Лабораторна робота №3</strong><br>
+                    GraphQL API книгарні «Букварня»
+                </a>
+            </li>
+            <li>
+                <a class="lab-link" href="https://github.com/xriks/CPP-Bulhakov/tree/main/lab4">
+                    <strong>Лабораторна робота №4</strong><br>
+                    SPA-застосунок «Букварня» (React Hooks, Tailwind CSS)
+                </a>
+            </li>
+            <li>
+                <a class="lab-link" href="https://github.com/xriks/CPP-Bulhakov/tree/main/lab5">
+                    <strong>Лабораторна робота №5</strong><br>
+                    Мобільний застосунок «Букварня» Mobile (React Native, Expo)
+                </a>
+            </li>
+            <li>
+                <a class="lab-link" href="https://github.com/xriks/CPP-Bulhakov/tree/main/lab6">
+                    <strong>Лабораторна робота №6</strong><br>
+                    Десктопний застосунок «Букварня» (Electron)
+                </a>
+            </li>
+            <li>
+                <a class="lab-link" href="https://github.com/xriks/CPP-Bulhakov/tree/main/lab7-8">
+                    <strong>Лабораторна робота №7-8</strong><br>
+                    Проєктування спільного коду та архітектури крос-платформного застосунку (monorepo, спільне ядро, npm workspaces)
+                </a>
+            </li>
+        </ul>
+    </section>
+</main>
+</body>
+</html>
