@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com"
+    />
+    <title>Букварня Desktop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Букварня</h1>
+            <p>Десктопний застосунок книгарні</p>
+        </div>
+    </header>
+
+    <main class="container main">
+        <section class="card">
+            <h2>Додати нову книгу</h2>
+            <div class="form-grid">
+                <input type="text" id="bookTitleInput" class="full" placeholder="Назва книги..." aria-label="Назва книги" />
+                <input type="text" id="bookAuthorInput" class="full" placeholder="Автор..." aria-label="Автор" />
+                <input type="number" id="bookPriceInput" placeholder="Ціна, грн" aria-label="Ціна" min="0" step="0.01" />
+                <input type="number" id="bookStockInput" placeholder="Кількість, шт" aria-label="Кількість" min="0" step="1" />
+                <select id="genreSelect" aria-label="Жанр"></select>
+                <input type="text" id="bookPublisherInput" placeholder="Видавництво" aria-label="Видавництво" />
+                <textarea id="bookDescriptionInput" class="full" placeholder="Опис" aria-label="Опис" rows="3"></textarea>
+                <button id="addBookButton" class="button full">Додати книгу</button>
+            </div>
+            <p id="message" class="message"></p>
+        </section>
+
+        <section class="card">
+            <h2>Каталог книг</h2>
+            <input type="search" id="searchInput" class="search-input" placeholder="Пошук за назвою, автором, жанром..." aria-label="Пошук" />
+            <ul id="booksList" class="books-list"></ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Лабораторна робота №7-8. Спільне ядро | Книгарня «Букварня»</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

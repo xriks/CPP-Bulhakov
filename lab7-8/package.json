@@ -1,0 +1,12 @@
+{
+  "name": "bukvarnia-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Букварня — monorepo зі спільним ядром, веб- та десктопним клієнтами",
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "test": "npm test --workspaces --if-present",
+    "start:web": "npm start -w bukvarnia-web",
+    "start:desktop": "npm start -w bukvarnia-monorepo-desktop"
+  }
+}

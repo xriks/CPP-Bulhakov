@@ -1,0 +1,13 @@
+{
+  "name": "bukvarnia-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@bukvarnia/core": "*"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  }
+}
