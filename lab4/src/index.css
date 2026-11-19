@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #8b263e;
+  --color-brand-dark: #6b1d30;
+  --color-navy: #2c3e50;
+  --color-sand: #fbf9f5;
+  --color-cream: #fffcf8;
+  --color-line: #f0e2d0;
+  --color-line-dark: #e5d5c5;
+  --color-ink: #2c2c2c;
+  --font-sans: "Montserrat", sans-serif;
+}
